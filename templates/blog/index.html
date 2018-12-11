@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %}
+{% block content %}
+    {% include 'blog/header.html' %}
+<div class="container">
+    <div class="row">
+
+        <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+        {% for art in articles%}
+            <div class="post-preview">
+                <a href="">
+                    <h2 class="post-title">{{ art.title }}</h2>
+                    <h3 class="post-subtitle">{{ art.desc }}</h3>
+                <div class="post-content-preview">{{ art.content }}</div>
+                </a>
+                <p class="post-meta" style="margin:10px 0;">Post by crazy-sugar on {{ art.create_time }}</p>
+                <hr>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    {% block css %}
+        {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static '/blog/css/bootstrap.min.css' %}">
+    <!--<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">-->
+    <link rel="stylesheet" type="text/css" href="{% static '/blog/css/font-awesome.min.css'%}">
+    <link rel="apple-touch-icon-precomposed" href="{% static '/blog/images/icon/icon.png'%}">
+    <link rel="shortcut icon" href="{% static '/blog/images/icon/favicon.ico'%}">
+
+    <link rel="stylesheet" href="/static/blog/css/beantech.min.css">
+    <link rel="stylesheet" href="/static/blog/css/highlight.css">
+    <link rel="stylesheet" href="/static/blog/css/widget.css">
+    <link rel="stylesheet" href="/static/blog/css/rocket.css">
+
+    <link rel="stylesheet" href="/static/blog/css/toc.css">
+
+
+    {% endblock %}
+</head>
+<body>
+
+    {% block content %}
+        {% include 'blog/header.html' %}
+    {% endblock %}
+
+    {% include 'blog/footer.html' %}
+
+    {% block js %}
+        <!--<script src="static/js/jquery-2.1.4.min.js"></script>-->
+        <!--<script src="static/js/jquery-1.11.1.min.js" type="text/javascript"></script>-->
+        <!--<script src="static/js/html5shiv.min.js" type="text/javascript"></script>-->
+        <!--<script src="static/js/respond.min.js" type="text/javascript"></script>-->
+        <!--<script src="static/js/selectivizr-min.js" type="text/javascript"></script>-->
+    {% endblock %}
+
+
+</body>
+</html>

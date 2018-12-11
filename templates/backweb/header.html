@@ -1,0 +1,66 @@
+<style>
+    header.intro-header{
+        background-image: url('/static/blog/images/header_img/mill.jpg')
+    }
+</style>
+<header class="intro-header" >
+
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                    <div class="site-heading">
+                        <h1>Stay Hungry, Stay Young </h1>
+
+                        <span class="subheading">Admire those who admire others</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">oooh navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">OOOH</a>
+        </div>
+
+
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="{% url 'blog:index'%}">Home</a>
+                    </li>
+
+                        <li>
+                            <a href="/">Archives</a>
+                        </li>
+
+
+                        <li>
+                            <a href="/archive/">Column</a>
+                        </li>
+
+                        <li>
+                            <a href="#">welcome,{{ user.username }}</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'backweb:login' %}">Logout</a>
+                        </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</nav>
